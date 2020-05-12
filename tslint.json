@@ -9,6 +9,8 @@
     ]
   },
   "rules": {
+    "no-console": false,
+    "semicolon":[true, "never", "ignore-interfaces"],
     "indent": [true, "spaces", 2],
     "interface-name": false,
     "no-consecutive-blank-lines": false,

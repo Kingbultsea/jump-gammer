@@ -1,32 +1,80 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <transition name="fade">
+      <div class="globalTips" v-if="showGlobalTipsConfig.show" style="padding: 5px 10px 5px 10px;border-radius: 10px;background: rgba(0, 0, 0, 0.3);color: #fff;position:fixed;z-index: 999;
+      width: max-content;top:20%;left:50%;transform: translateX(-50%) translateY(-50%);
+      display: flex;justify-content: center;align-items: center">
+        <img v-if="showGlobalTipsConfig.showVisualAvatar && showGlobalTipsConfig.role === 1" style="width: 40px" src="./views/Game/role_assest/201201-avatar.png"/>
+        <img v-if="showGlobalTipsConfig.showVisualAvatar && showGlobalTipsConfig.role === 2" style="width: 40px" src="./views/Game/role_assest/204301-avatar.png"/>
+        <img v-if="showGlobalTipsConfig.showVisualAvatar && showGlobalTipsConfig.role === 3" style="width: 40px" src="./views/Game/role_assest/206301-avatar.png"/>
+        <img v-if="showGlobalTipsConfig.showVisualAvatar && showGlobalTipsConfig.role === 4" style="width: 40px" src="./views/Game/role_assest/211201-avatar.png"/>
+        {{showGlobalTipsConfig.tips}}
+      </div>
+    </transition>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+  import {Component, Vue} from 'vue-property-decorator'
 
-#nav {
-  padding: 30px;
+  interface GlobalTipsConfigType { // 全局提示
+    showVisualAvatar: boolean,
+    role: role,
+    tips: string,
+    show: boolean,
+    debounceFuncName: any
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  @Component({
+    components: {},
+  })
+  export default class App extends Vue {
+    private showGlobalTipsConfig: GlobalTipsConfigType = { // 全局提示
+      showVisualAvatar: false,
+      role: 1,
+      tips: '',
+      show: false,
+      debounceFuncName: undefined,
+    }
 
-    &.router-link-exact-active {
-      color: #42b983;
+    private tips(desc: string, visual: boolean = false, role: role = 1) {
+      if (visual) {
+        this.showGlobalTipsConfig.showVisualAvatar = true
+        this.showGlobalTipsConfig.role = role
+      } else {
+        this.showGlobalTipsConfig.showVisualAvatar = false
+      }
+
+      if (this.showGlobalTipsConfig.debounceFuncName !== undefined) {
+        clearTimeout(this.showGlobalTipsConfig.debounceFuncName)
+      }
+
+      this.showGlobalTipsConfig.show = true
+      this.showGlobalTipsConfig.tips = desc
+
+      this.showGlobalTipsConfig.debounceFuncName = setTimeout(() => {
+        this.showGlobalTipsConfig.show = false
+      }, 2000)
     }
   }
-}
+</script>
+
+<style lang="scss">
+  #app {
+    position: relative;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+ * {
+   padding: 0px;
+   margin: 0px;
+   font-family: happy;
+ }
+ @font-face {
+   font-family: 'happy';
+   src: url("./assets/happy.ttf");
+ }
 </style>

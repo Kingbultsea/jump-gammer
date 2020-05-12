@@ -1,0 +1,129 @@
+.background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 100%;
+  }
+}
+
+.set-game-template {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .input {
+    outline: unset;
+    background: unset;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.51);
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+  }
+  .input::placeholder {
+    color: rgba(255, 255, 255, 0.48);
+  }
+  .players-template {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .players {
+      width: 300px;
+      margin-bottom: 10px;
+      .avatar {
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .button {
+    width: max-content;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 5px 10px 5px 10px;
+  }
+
+}
+
+// 规则介绍面板
+.mail-cell-template {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  >.content {
+    color: #4b577c;
+    text-align: left;
+    font-size: 13px;
+    margin-top: 61px;
+    position: relative;
+    width: 290px;
+    text-indent: 2em;
+    z-index: 1;
+    height: 200px;
+    line-height: 22px;
+    div {
+      text-indent: 2em;
+    }
+    // background-color: rgba(0, 0, 0, 0.5);
+  }
+  .mail-cell {
+    position: absolute;
+    width: 340px;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+  }
+
+  .btn-template {
+    position: relative;
+    z-index: 55;
+    width: max-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    >p {
+      position: relative;
+      z-index: 2;
+      color: #4b577c;
+      font-size: 15px;
+    }
+    >.bg {
+      fontSize: 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

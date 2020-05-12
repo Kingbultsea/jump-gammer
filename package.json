@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "copy": "COPY /y D:\\jump-gammer\\dist\\index.html E:\\heartide\\frontend-wangjianhai\\DragonBoatFestival2019\\dist",
+    "experiment": "vue-cli-service build --mode experiment && node cdn",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
@@ -11,6 +13,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "pixi-charm": "^4.5.3",
+    "pixi-dust": "^4.5.3",
+    "pixi-projection": "^0.3.11",
+    "pixi-spine": "^2.0.5",
+    "pixi.js": "^5.0.0",
+    "pixi.js-legacy": "^5.0.0",
+    "qiniu": "^7.3.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",

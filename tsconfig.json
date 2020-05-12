@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "typeRoots": ["./src/views/Game/game.d.ts"],
     "types": [
       "webpack-env",
       "jest"
@@ -30,9 +31,10 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/**/*.vue"
+    //,
+    // "tests/**/*.ts",
+    // "tests/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
