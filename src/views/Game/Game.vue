@@ -565,11 +565,11 @@
         window.$ws.onmessage = this.onMessage
         window.$ws.onclose = this.onClose
       } catch {
-        // this.$router.replace('/')
-        // setTimeout(() => {
-        //   window.location.reload()
-        //   return
-        // }, 300)
+        this.$router.replace('/')
+        setTimeout(() => {
+          window.location.reload()
+          return
+        }, 300)
       }
 
       this.dotAnimation = setInterval(() => {
