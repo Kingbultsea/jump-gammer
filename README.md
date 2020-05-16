@@ -9,9 +9,9 @@
 那时候遇到了各种部署上去的问题，通宵了两晚修改pixi和pixi-spine的源码，遗憾的是错过了比赛提交的时间节点。所以这就是，
 那个stone（人物踩在上方的，落脚物）为什么是HuyaLogo的原因。
 
-所以把这个项目拉出来，修改成web页面，做个基本游戏的示范教程吧。
+所以把这个项目拉出来，修改成web页面，http升级成websocket，做个基本游戏的示范教程吧。
 
-[项目示例](http://web.debug.psy-1.com/cosleep/dragonboat?from=singlemessage)
+[项目示例](http://web.debug.psy-1.com/cosleep/dragonboat?from=singlemessage)，欢迎提issues。
 
 ## 工具
 * mvc或者mvvm框架，自己喜欢就行，用自己熟悉的。
