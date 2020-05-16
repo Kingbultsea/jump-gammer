@@ -1,1 +1,1 @@
-*.ts    text eol=lf
+*.vue linguist-language=TypeScript
