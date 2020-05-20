@@ -14,9 +14,9 @@
 [项目示例](http://web.debug.psy-1.com/cosleep/dragonboat?from=singlemessage)，欢迎提issues。
 
 ## 预览图
-![img](https://res.psy-1.com/Fo0lZeDsLmUnYoSaHN5T_r1-fInF)
-![img](https://res.psy-1.com/Fk9016f3hAJSMHOWf6CGkR4Bejcn)
-![img](https://res.psy-1.com/Fiq7aaC4dlbqcdDzclicTsapds77)
+![img](https://res.psy-1.com/FiAOzARZUwWuN7F2TAbO9_5S3K3V)
+![img](https://res.psy-1.com/Ft76gwt3zotcYtC5Dfl3UmW3l7Fq)
+![img](https://res.psy-1.com/FigPdtJYbtwOUDP4oe9JGyT--dB3)
 
 ## Demo Getting Started
 ```shell script
