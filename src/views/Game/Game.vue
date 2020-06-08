@@ -271,7 +271,9 @@
     private spineSklecton(name: 201201 | 204301 | 206301 | 211201, x: number = 0, y: number = 0, frontSize: Front): Role {
       const container = new PIXI.projection.Container2d()
 
-      const json = require(`./role_assest/${name}/${name}.json`) // 一定要url
+      const json = require(`./role_assest/${name}/${name}.json`)
+      // 一定要url cdn 这里我踩过很多坑，改源码改到头痛（如果只是json文件，不是url）
+
       const atlas = ATLAS[name]
 
       // 通过外部方式引入

@@ -240,7 +240,7 @@
     const pattern = arg + '=([^&]*)'
     const replaceText = arg + '=' + val
     return url.match(pattern) ?
-      url.replace(eval('/(' + arg + '=)([^&]*)/gi'), replaceText)
+      url.replace(new RegExp('/(' + arg + '=)([^&]*)/gi'), replaceText)
       : (url.match('[\?]')
         ? url + '&' + replaceText
         : url + '?' + replaceText)

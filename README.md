@@ -15,7 +15,11 @@
 
 ## 预览图
 ![img](https://res.psy-1.com/FiAOzARZUwWuN7F2TAbO9_5S3K3V)
+
+
 ![img](https://res.psy-1.com/Ft76gwt3zotcYtC5Dfl3UmW3l7Fq)
+
+
 ![img](https://res.psy-1.com/FigPdtJYbtwOUDP4oe9JGyT--dB3)
 
 ## Demo Getting Started
@@ -23,18 +27,18 @@
 # npm i
 # npm run serve
 ```
-最后，简单粗暴的git clone 服务器
+git clone 服务器[url](https://github.com/Kingbultsea/hserve-rabit)
 ```shell script
 # npm i
 # tsnd --respawn ./src/serve-1.0.1.ts
 ```
-完成，哪里报错改哪里。
+完成，哪里报错改哪里（比如服务器url，需要直接修改下）。
 
 ## 工具
 * mvc或者mvvm框架，自己喜欢就行，用自己熟悉的。
 * PixiJS，PixiJS是啥？
 PixiJS是一个超快的2D渲染引擎。它自动侦测使用 WebGL 或者 Canvas。开发者无需专门学习 WebGL 就能感受到强大的硬件加速的力量。
-emm，反正就是一个很厉害的东西（网易哒哒最喜欢PixiJS了，我一开始研究他们的H5，他们就是用PixiJS实现各种好玩的交互的）。
+emm，反正就是一个很厉害的东西（某厂哒哒最喜欢PixiJS了，我一开始研究他们的H5，他们就是用PixiJS实现各种好玩的交互的）。
 * pixi-spine，骨架。使制作好的动画可以加载于Pixi，可以调用方法来进行动画播放。
 * TypeScript，静态类型检查工具，游戏状态类型多，一定一定要用，不然修改对象类型根本无从下手。
 * git，版本管理工具，顺便要说的是，要遵循常用Gitflow工作流程，大型的游戏一个人根本开发不来（虽然这不是大型游戏，但是建议哦，从小做起）。
@@ -47,13 +51,17 @@ emm，反正就是一个很厉害的东西（网易哒哒最喜欢PixiJS了，�
 游戏需要四位玩家，每位玩家只能控制三个位置，所移动到的位置如果有且仅有一位玩家到达，那么获得该位置得得分，否制大家都获得不了分数。
 游戏房主在创建房间的时候，如果退出房间，该房间解散，玩家们需要重新选择房间或创建房间。
 
-![img](https://res.psy-1.com/FlkPBGh47Y3hW10bN1T3IHNLTbQk) （真简单）
+![img](https://res.psy-1.com/FlkPBGh47Y3hW10bN1T3IHNLTbQk)状态考虑的东西就有点多了。
 
 ### 工具配置
 
 ### Sprite
-Sprite是啥？是一个模型，然后再贴上一点图（texture）。Pixi.Sprite自带很多方法，根据我们的游戏需求，
-了解相关Api即可。
+Sprite是啥？可以当作一个模型精灵对象，然后再贴上一点图（texture纹理），封装了很多方法，根据我们的游戏需求，了解相关Api即可。
+
+生成一个sprite
+```typescript
+
+```
 
 #### 人物sprite
 创建人物Sprite，人物？人物起码会动吧？面部表情？身体动作？那我们是不是要建造一个容器，容器里面包括无数sprite或者无数子容器，比如人物的手、脸部、头部等。
