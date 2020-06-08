@@ -56,21 +56,45 @@ emm，反正就是一个很厉害的东西（某厂哒哒最喜欢PixiJS了，�
 ### 工具配置
 
 ### Sprite
-Sprite是啥？可以当作一个模型精灵对象，然后再贴上一点图（texture纹理），封装了很多方法，根据我们的游戏需求，了解相关Api即可。
+Sprite是啥？可以当作一个图片的对象（texture纹理）。
 
 生成一个sprite
 ```typescript
+const SPRITE = new PIXI.Sprite.from('xx.png')
 
+// or
+PIXI.Loader.shared.add("assets/spritesheet.json").load(setup)
+function setup() {
+  let sheet = PIXI.Loader.shared.resources["assets/spritesheet.json"].spritesheet;
+  let sprite = new PIXI.Sprite(sheet.textures["image.png"]);
+}
 ```
+
+### AnimatedSprite
+动画序列帧Sprite,比如我们碰撞的时候需要眩晕效果，跳跃的时候需要尘埃效果，这个时候就可以使用播放序列帧的方法，达到动画的效果。
+```typescript
+public parseTexture(textures: PIXI.Texture, x: number, y: number) {
+    const animationSprite = new PIXI.AnimatedSprite(textures)
+    animationSprite.animationSpeed = 0.2
+    animationSprite.width = 50
+    animationSprite.height = 50
+    animationSprite.x = x
+    animationSprite.y = y
+    animationSprite.gotoAndPlay(Math.random() * 2)
+}
+```
+
+### PIXI-SPINE
+
 
 #### 人物sprite
 创建人物Sprite，人物？人物起码会动吧？面部表情？身体动作？那我们是不是要建造一个容器，容器里面包括无数sprite或者无数子容器，比如人物的手、脸部、头部等。
 emmm，这也太难了吧？光是把sprite组合起来就已经麻烦了，而且还要按照规律来移动手臂，身体，脸部表情。
 怎么办？pixi-spine走起。
 #### stone sprite
-#### 跳跃sprite
-#### 灰尘sprite
-#### 气泡Sprite
+#### 跳跃AnimatedSprite
+#### 灰尘AnimatedSprite
+#### 气泡AnimatedSprite
 
 
 ### Action
