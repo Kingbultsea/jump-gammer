@@ -11,7 +11,7 @@
 
 所以把这个项目拉出来，修改成web页面，http升级成websocket，做个基本游戏的示范教程吧。
 
-[项目示例](http://web.debug.psy-1.com/cosleep/dragonboat?from=singlemessage)，欢迎提issues。
+[项目示例](https://website.heartide.com/toy?from=singlemessage)，欢迎提issues。
 
 ## 预览图
 ![img](https://res.psy-1.com/FiAOzARZUwWuN7F2TAbO9_5S3K3V)
